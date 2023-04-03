@@ -1,3 +1,8 @@
-<button (click)="backendService.ping()">Click me to ping backend</button>
-<button (click)="backendService.putStock('AAPL')">Post a stock</button>
-<button (click)="backendService.fetchStocks()">Fetch all stocks</button>
+<!-- <button (click)="backendService.ping()">Click me to ping backend</button>
+<button (click)="backendService.fetchStocks()">Fetch all stocks</button> -->
+
+
+<div class="panels" *ngFor="let panel of panels; ">
+
+</div>
+<button (click)="backendService.putStock('AAPL')">Put a stock</button>

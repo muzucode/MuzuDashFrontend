@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Stock } from 'src/interfaces/Stock';
+import { Stock } from 'src/models/Stock';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ import { Stock } from 'src/interfaces/Stock';
 export class BackendService {
   constructor(private readonly http: HttpClient){}
 
-  ping() {
+  ping() {  
     let response = this.http.get('/api/')
     response.subscribe(data => {
       console.log(data)
@@ -17,7 +17,7 @@ export class BackendService {
 
   putStock(ticker: string) {
     let stock: Stock = {ticker: ticker}
-    let response = this.http.post('/api/stocks', {stock: stock}).subscribe(data => {
+    let response = this.http.put('/api/stocks', {stock: stock}).subscribe(data => {
       console.log(data)
     })
   }

@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PanelsComponent } from './panels/panels.component';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { BackendService } from '../backend.service';
+import { PanelsConfigComponent } from './panels/panels-config/panels-config.component';
 
 @NgModule({
   declarations: [
     PanelsComponent,
-    MainNavComponent
+    PanelsConfigComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     PanelsComponent,
-    MainNavComponent,
   ]
 })
 export class MainDashboardModule {

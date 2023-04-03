@@ -1,0 +1,19 @@
+.panels {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 20px;
+  .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    .panel {
+      flex: 1;
+      border: 1px solid blue;
+      height: 200px;
+    }
+  }
+
+}
